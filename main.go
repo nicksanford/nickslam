@@ -139,7 +139,7 @@ func (f *fake) DoCommand(ctx context.Context, extra map[string]interface{}) (map
 }
 
 func mainWithArgs(ctx context.Context, args []string, logger logging.Logger) (err error) {
-	resource.RegisterComponent(
+	resource.RegisterService(
 		slam.API,
 		Model,
 		resource.Registration[slam.Service, *Config]{Constructor: newSlam})
