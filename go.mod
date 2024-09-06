@@ -1,4 +1,4 @@
-module github.com/nicksanford/boomsensor
+module github.com/nicksanford/nickslam
 
 go 1.21.13
 
