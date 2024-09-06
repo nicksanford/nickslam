@@ -1,0 +1,22 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "ncs:nickslam",
+  "visibility": "public",
+  "url": "https://github.com/nicksanford/nickslam",
+  "description": "example slam service",
+  "models": [
+    {
+      "api": "rdk:service:slam",
+      "model": "ncs:slam:nickslam"
+    }
+  ],
+  "build": {
+    "build": "make module",
+    "path": "module.tar.gz",
+    "arch": [
+      "linux/amd64",
+      "linux/arm64"
+    ]
+  },
+  "entrypoint": "bin/nickslam"
+}
