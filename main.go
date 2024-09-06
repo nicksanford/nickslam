@@ -124,7 +124,7 @@ func (f *fake) InternalState(context.Context) (func() ([]byte, error), error) {
 }
 
 func (f *fake) Properties(ctx context.Context) (slam.Properties, error) {
-	return slam.Properties{}, nil
+	return slam.Properties{MappingMode: slam.MappingModeLocalizationOnly}, nil
 }
 
 func (f *fake) DoCommand(ctx context.Context, extra map[string]interface{}) (map[string]interface{}, error) {
