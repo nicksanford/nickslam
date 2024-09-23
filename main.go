@@ -100,6 +100,8 @@ func (f *fake) Position(context.Context) (spatialmath.Pose, error) {
 const chunkSizeBytes = 1 * 1024 * 1024
 
 func (f *fake) PointCloudMap(context.Context, bool) (func() ([]byte, error), error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
 	var b *bytes.Reader
 	if f.big {
 		b = bytes.NewReader(bigPCDBytes)
